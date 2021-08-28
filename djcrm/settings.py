@@ -12,7 +12,7 @@ https://docs.djangoproject.com/en/2.0/ref/settings/
 
 import os
 import environ
-import django_heroku
+
 
 
 env = environ.Env(
@@ -171,4 +171,4 @@ if 'DATABASE_URL' in os.environ:
     import dj_database_url
     DATABASES = {'default': dj_database_url.config()}
 
-django_heroku.settings(locals())
+
