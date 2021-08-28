@@ -23,7 +23,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('',LandingPageView.as_view(),name='landing-page'),
     path('dashboard/', DashboardView.as_view(), name='dashboard'),
-    path('leads/',include('leads.urls',namespace="leads")),
+    path('/leads',include('leads.urls',namespace="leads")),
     path('agents/',include('agents.urls',namespace="agents")),
     path('login/',LoginView.as_view(),name='login'),
     path('signup/',SingupView.as_view( ),name='signup'),
